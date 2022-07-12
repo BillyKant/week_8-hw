@@ -12,13 +12,15 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <Router>
-      <Routes>
-        <Route path='/' element={<Home title  ={'Cars Inventory'}/>} />
-        <Route path='/dashboard' element={<Dashboard />} />
-        <Route path='/signin' element={<Signin />} />
-      </Routes>
-    </Router>
+    <ThemeProvider theme={theme}>
+      <Router>
+        <Routes>
+          <Route path='/' element={<Home title  ={'Cars Inventory'}/>} />
+          <Route path='/dashboard' element={<Dashboard />} />
+          <Route path='/signin' element={<Signin />} />
+        </Routes>
+      </Router>
+    </ThemeProvider>
   </React.StrictMode>
 );
 

@@ -1,7 +1,8 @@
 import React from "react";
-import { styled } from '@mui/system';
+import { rgbToHex, styled } from '@mui/system';
 import { Button } from '@mui/material';
 import { Link } from 'react-router-dom';
+import { theme } from "../../Theme/themes";
 import car_background from '../../assets/images/car-background.jpg';
 
 interface Props{
@@ -17,6 +18,7 @@ const NavbarContainer = styled('div')( {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
+    backgroundColor: 'rgb(00,96,88)'
 })
 const Logo = styled('h1')({
     margin: '0 0 0 0.45em'
@@ -37,7 +39,8 @@ const LogoNavigation = styled('ul')( {
 const NavA = styled(Link)({
     display: 'block',
     padding: '1em',
-    color: 'black'
+    color: 'black',
+    backgroundColor: 'theme.palette.primary'
 })
 const Main = styled('main')( {
     backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${car_background});`,
@@ -47,6 +50,7 @@ const Main = styled('main')( {
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
     position: 'absolute',
+    backgroundColor: 'primary'
 })
 const MainText = styled('div')({
     textAlign: 'center',
