@@ -1,6 +1,6 @@
 import React from "react";
 import { rgbToHex, styled } from '@mui/system';
-import { Button } from '@mui/material';
+import { Button, Box } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { theme } from "../../Theme/themes";
 import car_background from '../../assets/images/car-background.jpg';
@@ -14,11 +14,12 @@ const Root = styled("div")({
     padding: 0,
     margin: 0
 })
-const NavbarContainer = styled('div')( {
+const NavbarContainer = styled(Box)( {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    backgroundColor: 'rgb(00,96,88)'
+    // backgroundColor: theme.palette.primary,
+    // backgroundColor: 'rgb(00,96,88)',
 })
 const Logo = styled('h1')({
     margin: '0 0 0 0.45em'
@@ -64,7 +65,7 @@ const MainText = styled('div')({
 export const Home = ( props:Props) => {
     return (
         <Root>
-            <NavbarContainer>
+            <NavbarContainer sx={{backgroundColor: 'primary.main'}}>
                 <Logo>
                     <LogoA to="/">Ranger Cars</LogoA>
                 </Logo>

@@ -19,7 +19,7 @@ const columns: GridColDef[] = [
     {
         field: 'year',
         headerName: 'Year',
-        type: 'number',
+        // type: 'boolean',
         width: 110,
         editable: true,
     },
@@ -35,15 +35,15 @@ const columns: GridColDef[] = [
 ];
 
 const rows = [
-    { id: 1, make: 'Toyota', model: 'Tundra', year: 2018 },
-    { id: 2, make: 'Ford', model: 'F150', year: 1982 },
-    { id: 3, make: 'Chevy', model: 'Cruze', year: 2013 },
-    { id: 4, make: 'Honda', model: 'Odyssey', year: 2005 },
-    { id: 5, make: 'BMW', model: 'X2', year: 2022 },
-    { id: 6, make: 'VW', model: null, year: 1967 },
-    { id: 7, make: 'Ford', model: 'Mustang', year: 1997 },
-    { id: 8, make: 'Subaru', model: 'Outback', year: 2020 },
-    { id: 9, make: 'Honda', model: 'Civic', year: 2008 },
+    { id: 1, make: 'Toyota', model: 'Tundra', year: '2018' },
+    { id: 2, make: 'Ford', model: 'F150', year: '1982' },
+    { id: 3, make: 'Chevy', model: 'Cruze', year: '2013' },
+    { id: 4, make: 'Honda', model: 'Odyssey', year: '2005' },
+    { id: 5, make: 'BMW', model: 'X2', year: '2022' },
+    { id: 6, make: 'VW', model: null, year: '1967' },
+    { id: 7, make: 'Ford', model: 'Mustang', year: '1997' },
+    { id: 8, make: 'Subaru', model: 'Outback', year: '2020' },
+    { id: 9, make: 'Honda', model: 'Civic', year: '2008' },
 ];
 
 export const DataTable = () => {
